@@ -27,10 +27,10 @@
 				<link>{{config.url}}{{ post.url }}</link>
 				<pubDate>{{ post.date.format("ddd, DD MMM YYYY HH:mm:ss Z") }}</pubDate>
 				<guid>{{config.url}}/podcasts/{{ post.slug }}</guid>
-				<description><![CDATA[{{ post.content }}!]]></description>
+				<description><![CDATA[{{ post.excerpt }}!]]></description>
 				<itunes:author>Western Devs</itunes:author>
 				<itunes:subtitle>{{ post.description }}</itunes:subtitle>
-				<itunes:summary><![CDATA[{{ post.content }}!]]></itunes:summary>
+				<itunes:summary><![CDATA[{{ post.excerpt }}!]]></itunes:summary>
 				{% if post.podcast.libsynId %}
 				<enclosure url="http://traffic.libsyn.com/westerndevspodcast/{{post.podcast.filename}}" length="{{post.podcast.filesize}}" type="audio/mpeg" />
 				{% else %}
